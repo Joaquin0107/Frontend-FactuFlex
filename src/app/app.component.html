@@ -2,16 +2,7 @@
   <button mat-button [routerLink]="['/landing']">
     <mat-icon>home</mat-icon>Home
   </button>
-
-  <button mat-button [matMenuTriggerFor]="menuGreenarea" *ngIf="isGerente()">
-    <mat-icon>location_city</mat-icon>
-    Área Verde
-  </button>
-  <button mat-button [matMenuTriggerFor]="menuMaintenance" *ngIf="isOperario()">
-    <mat-icon>style</mat-icon>
-    Mantenimientos
-  </button>
-  <button mat-button [matMenuTriggerFor]="menuReport">
+  <button mat-button [matMenuTriggerFor]="menuReport" *ngIf="isGerente()">
     <mat-icon>file_copy</mat-icon>
      Reportes
   </button>
@@ -26,17 +17,10 @@
 
   <!-- Agrega más elementos de menú si es necesario -->
 </mat-menu>
-<mat-menu #menuMaintenance="matMenu">
-  <button mat-menu-item routerLink="/mantenimientos/nuevo">Registrar</button>
-  <button mat-menu-item routerLink="/mantenimientos">Listar</button>
 
-  <!-- Agrega más elementos de menú si es necesario -->
-</mat-menu>
 <mat-menu #menuReport="matMenu">
-  <button mat-menu-item routerLink="/reportes">Cantidad de mantenimientos por área verde</button>
-  <button mat-menu-item routerLink="/reportes/reporte02">Dinero invertido en área verde</button>
+  <button mat-menu-item routerLink="/reportes">Reportes</button>
 
-  <!-- Agrega más elementos de menú si es necesario -->
 </mat-menu>
 <mat-menu #menuSalir="matMenu">
   <button mat-menu-item routerLink="/login" (click)="cerrar()">
