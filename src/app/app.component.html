@@ -8,11 +8,11 @@
   <button
     mat-button
     [matMenuTriggerFor]="menuClientes"
-    *ngIf="isGerente() || isOperario()"
+    *ngIf="isAdmin()"
   >
     <mat-icon>face</mat-icon> Clientes
   </button>
-  <button mat-button [matMenuTriggerFor]="menuOperacion" *ngIf="isOperario()">
+  <button mat-button [matMenuTriggerFor]="menuOperacion" *ngIf="isCliente() || isAdmin()">
     <mat-icon>balance</mat-icon> Operaciones
   </button>
   <button mat-button [matMenuTriggerFor]="menuSalir">

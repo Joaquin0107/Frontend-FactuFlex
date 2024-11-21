@@ -33,11 +33,11 @@ export class AppComponent {
     this.role = this.loginService.showRole();
     return this.loginService.verificar();
   }
-  isGerente() {
-    return this.role === 'GERENTE';
+  isCliente() {
+    return this.role === 'CLIENTE';
   }
 
-  isOperario() {
-    return this.role === 'OPERARIO';
+  isAdmin() {
+    return this.role === 'ADMIN';
   }
 }
