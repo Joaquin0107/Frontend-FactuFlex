@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    background-color: #f3f3f3; /* Color de fondo para el contenedor */
+    text-align: center; /* Centra el contenido del texto */
+}
+
+.login-form{
+    background-color: white;
+    padding: 50px;
+    width: 50%;
+    box-shadow: 20px 20px 30px black;
+    border-radius: 40px;
+    text-align: center;
+    flex: 1;
+}
+
+.full-width {
+    width: 50%;
+    border-radius: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}

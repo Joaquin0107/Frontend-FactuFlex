@@ -1,0 +1,13 @@
+img{
+   display: inline-block;
+   text-align: center;
+   width: 50%;
+   height: 50%;
+   align-content: center;
+   align-items: center;
+}
+
+p, h1{
+    text-align: end;
+    size: 54px;
+}

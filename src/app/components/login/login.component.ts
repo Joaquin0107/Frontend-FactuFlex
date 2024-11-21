@@ -7,11 +7,12 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatButtonModule, MatInputModule],
+  imports: [FormsModule, MatFormFieldModule, MatButtonModule, MatInputModule, MatCardModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
@@ -32,7 +33,7 @@ export class LoginComponent implements OnInit {
     this.loginService.login(request).subscribe(
       (data: any) => {
         sessionStorage.setItem('token', data.jwttoken);
-        this.router.navigate(['login']);
+        this.router.navigate(['landing']);
       },
       (error) => {
         this.mensaje = 'Credenciales incorrectas!!!';

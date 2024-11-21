@@ -1,24 +1,36 @@
-<div class="container" style="text-align: center">
-    <div>
-      <br>
-      <img src="https://cdn.discordapp.com/attachments/950315037719920701/1277883455702564946/FactuFlexLogo.png?ex=66cec935&is=66cd77b5&hm=09fd457124378314d3e6013b26f0947de41cd753b35325e19910fbab9c3c6600&" alt="Logo de la empresa" width="150" height="150"/>
+<section class="container">
+<div class="login-form">
+    <div class="logo">
+      <img
+        src="FactuFlex.png"
+        alt="Logo de la empresa"
+        width="500"
+        height="500"
+        style="flex: 1"
+      />
     </div>
-    <h2>Inicie sesión</h2>
-    <mat-form-field class="example-full-width">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Usuario</mat-label>
-      <input matInput placeholder="Username" [(ngModel)]="username" />
+      <input matInput placeholder="Usuario" [(ngModel)]="username"/>
     </mat-form-field>
-    <br />
-    <mat-form-field class="example-full-width">
-      <mat-label>Password</mat-label>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Contraseña</mat-label>
       <input
         type="password"
         matInput
-        placeholder="Password"
+        placeholder="Contraseña"
         [(ngModel)]="password"
       />
     </mat-form-field>
     <br />
-    <button mat-raised-button color="primary" (click)="login()">bryan gay</button>
-  </div>
-  
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="login()"
+      class="full-width"
+    >
+      Iniciar Sesión
+    </button>
+</div>
+</section>

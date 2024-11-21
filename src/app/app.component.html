@@ -1,26 +1,39 @@
-<mat-toolbar color="primary" *ngIf="verificar()">
+<mat-toolbar
+  style="background-color: rgba(15, 227, 86, 0.45); text-emphasis-color: black"
+  *ngIf="verificar()">
+  <p>FactuFlex</p>
   <button mat-button [routerLink]="['/landing']">
     <mat-icon>home</mat-icon>Home
   </button>
-  <button mat-button [matMenuTriggerFor]="menuReport" *ngIf="isGerente()">
+  <button
+    mat-button
+    [matMenuTriggerFor]="menuClientes"
+    *ngIf="isGerente() || isOperario()"
+  >
+    <mat-icon>face</mat-icon> Clientes
+  </button>
+  <button mat-button [matMenuTriggerFor]="menuOperacion" *ngIf="isOperario()">
+    <mat-icon>balance</mat-icon> Operaciones
+  </button>
+  <button mat-button [matMenuTriggerFor]="menuReport" *ngIf="isOperario()">
     <mat-icon>file_copy</mat-icon>
-     Reportes
+    Reportes
   </button>
   <button mat-button [matMenuTriggerFor]="menuSalir">
-    <mat-icon>person</mat-icon> Usuario
+    <mat-icon>person</mat-icon>
   </button>
 </mat-toolbar>
 
-<mat-menu #menuGreenarea="matMenu">
-  <button mat-menu-item routerLink="/areas/nuevo">Registrar</button>
-  <button mat-menu-item routerLink="/areas">Listar</button>
-
-  <!-- Agrega más elementos de menú si es necesario -->
+<mat-menu #menuClientes="matMenu">
+  <button mat-menu-item routerLink="/nuevo-cliente">Nuevo Cliente</button>
+  <button mat-menu-item routerLink="/ver-clientes">Ver Clientes</button>
 </mat-menu>
-
+<mat-menu #menuOperacion="matMenu">
+  <button mat-menu-item routerLink="/nueva-operacion">Nueva Operación</button>
+  <button mat-menu-item routerLink="/ver-operacion">Ver Operaciones</button>
+</mat-menu>
 <mat-menu #menuReport="matMenu">
-  <button mat-menu-item routerLink="/reportes">Reportes</button>
-
+  <button mat-menu-item routerLink="/ver-reportes">Ver Reportes</button>
 </mat-menu>
 <mat-menu #menuSalir="matMenu">
   <button mat-menu-item routerLink="/login" (click)="cerrar()">
