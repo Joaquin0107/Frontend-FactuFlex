@@ -1,7 +1,7 @@
 <mat-toolbar
-  style="background-color: rgba(15, 227, 86, 0.45); text-emphasis-color: black"
+  style="background-color: rgba(15, 227, 86, 0.45);display: flex; justify-content: space-between;align-items: center;"
   *ngIf="verificar()">
-  <h1><strong>FactuFlex</strong></h1>
+  <h1 style="margin: 0; font-size: 30px;font-weight: bold; color: black;"><strong>FactuFlex</strong></h1>
   <button mat-button [routerLink]="['/landing']">
     <mat-icon>home</mat-icon>Home
   </button>

@@ -1,13 +1,18 @@
-img{
-   display: inline-block;
-   text-align: center;
-   width: 50%;
-   height: 50%;
-   align-content: center;
-   align-items: center;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  justify-content: center; 
+  text-align: center;
+  gap: 20px;
+  padding: 20px; 
 }
 
-p, h1{
-    text-align: end;
-    size: 54px;
+img {
+  width: 45%;
+}
+
+.texto {
+  font-size: 30px;
 }
